@@ -1,0 +1,18 @@
+{
+    "name": "yidas/uri",
+    "description": "URL Standardized Redirector with Customized Setting for SEO",
+    "keywords": ["php", "uri", "url", "seo"],
+    "homepage": "https://github.com/yidas/php-uri",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yidas/php-uri/issues",
+        "source": "https://github.com/yidas/php-uri"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "yidas\\uri\\": "src/"
+        }
+    }
+}
