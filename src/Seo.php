@@ -10,7 +10,7 @@ namespace yidas\uri;
  * match your expectation.
  * 
  * @author 	Nick Tsai <myintaer@gmail.com>
- * @since   1.0.0
+ * @since   1.1.0
  */
 class Seo
 {
@@ -25,6 +25,11 @@ class Seo
      */
 	public static function trailingSlash($switch=true)
 	{
+        // AJAX skip
+        if (self::isAjax()) {
+            return new self;
+        }
+        
         $uri = self::getRequestUri();
         
         if ($switch) {
@@ -63,6 +68,11 @@ class Seo
      */
     public static function removeIndex($caseSensitive=false, $index='/index')
     {
+        // AJAX skip
+        if (self::isAjax()) {
+            return new self;
+        }
+        
         $uri = self::getRequestUri();
         // Find matched position
         $pos = $caseSensitive 
@@ -92,6 +102,17 @@ class Seo
     public static function getRequestUri()
     {
         return isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : NULL;
+    }
+
+    /**
+     * Is Reuest comes from AJAX
+     * 
+     * @return bool Result
+     */
+    public static function isAjax()
+    {
+        return (isset($_SERVER['HTTP_X_REQUESTED_WITH']) 
+            && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest');
     }
     
     /**
