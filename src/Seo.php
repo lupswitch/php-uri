@@ -16,8 +16,10 @@ class Seo
 {
     /**
      * Trailing Slash Handler
+     *
+     * By default it always redirect to uri with trailing slash.
      * 
-     * @param bool Switch to keep trailing slash or not
+     * @param bool Switch for redirecting to uri with trailing slash or not
      * @return object self
      * @example
      *  https://www.domain.com/about/   (Switch On)
