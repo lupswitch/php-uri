@@ -4,7 +4,7 @@
     "keywords": ["php", "uri", "url", "seo"],
     "homepage": "https://github.com/yidas/php-uri",
     "type": "library",
-    "license": "BSD-3-Clause",
+    "license": "MIT",
     "support": {
         "issues": "https://github.com/yidas/php-uri/issues",
         "source": "https://github.com/yidas/php-uri"
