@@ -44,16 +44,23 @@ COMPONENTS
 
 The usage methods are following:
 
-#### trailingSlash()
+#### `trailingSlash()`
 
-Trailing Slash Handler
+Trailing Slash Handler, by default it always redirect to uri with last slash.
 
 ```
 https://www.domain.com/about/   (Switch On)
 https://www.domain.com/about    (Switch Off)
 ```
 
-#### removeIndex()
+For example:
+
+```php
+yidas\uri\Seo::trailingSlash(false);
+// https://www.domain.com/about/ => https://www.domain.com/about
+```
+
+#### `removeIndex()`
 
 Most framework allows index action could be accessed by root URI of controller, this makes that way only.
 
